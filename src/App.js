@@ -1,24 +1,19 @@
-import logo from "./logo.svg";
-import "./App.css";
+import OptionCheckbox from "./components/OptionRadio";
+import PrincipalButton from "./components/PrincipalButton";
+import SecondaryButton from "./components/SecondaryButton";
+import Title from "./components/Title";
+import VisitCard from "./components/VisitCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="font-bold">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Title />
+      <OptionCheckbox />
+      <OptionCheckbox />
+      <PrincipalButton />
+      <SecondaryButton />
+      <VisitCard />
+    </main>
   );
 }
 
