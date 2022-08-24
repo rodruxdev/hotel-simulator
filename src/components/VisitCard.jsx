@@ -1,17 +1,18 @@
 import React from "react";
 import ListItem from "./ListItem";
+import "../styles/Cards.css";
 
 const VisitCard = () => {
   return (
-    <div>
-      <h2>Visita #1</h2>
+    <article className="Card">
+      <h2 className="mb-4 text-xl font-bold">Visita #1</h2>
       <ListItem />
       <ListItem />
       <ListItem />
       <ListItem />
       <ListItem />
       <ListItem />
-    </div>
+    </article>
   );
 };
 

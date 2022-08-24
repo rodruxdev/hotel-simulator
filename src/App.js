@@ -6,13 +6,19 @@ import VisitCard from "./components/VisitCard";
 
 function App() {
   return (
-    <main>
+    <main className="w-full flex items-center justify-center flex-col py-14">
       <Title />
-      <OptionCheckbox />
-      <OptionCheckbox />
-      <PrincipalButton />
-      <SecondaryButton />
-      <VisitCard />
+      <section className="m-4 flex justify-around items-center gap-10 flex-wrap">
+        <OptionCheckbox />
+        <OptionCheckbox />
+        <PrincipalButton />
+        <SecondaryButton />
+      </section>
+      <section className="w-[90%] my-16 grid lg:grid-cols-2 gap-x-8 gap-y-10 max-w-[1300px]">
+        <VisitCard />
+        <VisitCard />
+        <VisitCard />
+      </section>
     </main>
   );
 }
