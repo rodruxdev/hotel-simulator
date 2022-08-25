@@ -2,6 +2,6 @@
   @apply w-full p-11 border-primary border-4 rounded-2xl;
 }
 
-.Card:nth-child(2) {
+.Card:nth-child(2n) {
   @apply border-secondary;
 }
