@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Visit from "../lib/Visit";
 
 const initialState = {
   booked: 1,
@@ -13,7 +14,14 @@ const useGenerator = () => {
     setState(newState);
   };
 
-  return { state, setBooked };
+  const addVisit = () => {
+    const visit = new Visit();
+    const newVisits = state.visits;
+    newVisits.push(visit);
+    setState({ ...state, visits: newVisits });
+  };
+
+  return { state, setBooked, addVisit };
 };
 
 export default useGenerator;

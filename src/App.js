@@ -2,7 +2,7 @@ import OptionRadio from "./components/OptionRadio";
 import PrincipalButton from "./components/PrincipalButton";
 import SecondaryButton from "./components/SecondaryButton";
 import Title from "./components/Title";
-import VisitCard from "./components/VisitCard";
+import CardsContainer from "./containers/CardsContainer";
 import AppContext from "./context/AppContext";
 import useGenerator from "./hooks/useGenerator";
 
@@ -19,11 +19,7 @@ function App() {
           <PrincipalButton />
           <SecondaryButton />
         </section>
-        <section className="w-[90%] my-16 grid lg:grid-cols-2 gap-x-8 gap-y-10 max-w-[1300px]">
-          <VisitCard />
-          <VisitCard />
-          <VisitCard />
-        </section>
+        <CardsContainer />
       </main>
     </AppContext.Provider>
   );
