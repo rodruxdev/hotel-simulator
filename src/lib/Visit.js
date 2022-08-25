@@ -63,8 +63,27 @@ class Visit {
   }
 
   #createGuests() {
-    const visitors = Math.ceil(Math.random() * 10);
-    return { adults: visitors, children: 0 };
+    const adults = this.#createAdults();
+    let children = this.#createChildren();
+    children = adults + children > 10 ? 10 - adults : children;
+    return { adults, children };
+  }
+
+  #createAdults() {
+    const seed = Math.random();
+    const initial = Math.ceil(Math.random() * 5);
+    if (seed <= 0.8) {
+      return initial;
+    }
+    return initial + 5;
+  }
+
+  #createChildren() {
+    const seed = Math.random();
+    if (seed <= 0.5) {
+      return 0;
+    }
+    return Math.ceil(Math.random() * 2);
   }
 }
 
