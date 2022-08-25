@@ -7,7 +7,9 @@ const SecondaryButton = () => {
   const { state, deleteAllVisits } = useContext(AppContext);
 
   const handleClick = () => {
-    deleteAllVisits();
+    // eslint-disable-next-line no-restricted-globals
+    const isExecuted = confirm("¿Estas segura de eliminar todas las visitas?");
+    if (isExecuted) deleteAllVisits();
   };
   return (
     <button
