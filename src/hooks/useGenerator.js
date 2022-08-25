@@ -21,7 +21,11 @@ const useGenerator = () => {
     setState({ ...state, visits: newVisits });
   };
 
-  return { state, setBooked, addVisit };
+  const deleteAllVisits = () => {
+    setState({ ...state, visits: [] });
+  };
+
+  return { state, setBooked, addVisit, deleteAllVisits };
 };
 
 export default useGenerator;
