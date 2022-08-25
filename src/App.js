@@ -1,24 +1,25 @@
-import logo from "./logo.svg";
-import "./App.css";
+import OptionCheckbox from "./components/OptionRadio";
+import PrincipalButton from "./components/PrincipalButton";
+import SecondaryButton from "./components/SecondaryButton";
+import Title from "./components/Title";
+import VisitCard from "./components/VisitCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="font-bold">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="w-full flex items-center justify-center flex-col py-14">
+      <Title />
+      <section className="m-4 flex justify-around items-center gap-10 flex-wrap">
+        <OptionCheckbox />
+        <OptionCheckbox />
+        <PrincipalButton />
+        <SecondaryButton />
+      </section>
+      <section className="w-[90%] my-16 grid lg:grid-cols-2 gap-x-8 gap-y-10 max-w-[1300px]">
+        <VisitCard />
+        <VisitCard />
+        <VisitCard />
+      </section>
+    </main>
   );
 }
 
