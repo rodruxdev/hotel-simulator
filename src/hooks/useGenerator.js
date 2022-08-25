@@ -14,8 +14,8 @@ const useGenerator = () => {
     setState(newState);
   };
 
-  const addVisit = () => {
-    const visit = new Visit();
+  const addVisit = (booked) => {
+    const visit = new Visit(booked);
     const newVisits = state.visits;
     newVisits.push(visit);
     setState({ ...state, visits: newVisits });

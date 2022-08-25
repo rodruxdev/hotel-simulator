@@ -1,15 +1,18 @@
 import { faker } from "@faker-js/faker";
-faker.setLocale("es");
 
 class Visit {
-  constructor() {
+  constructor(booked) {
+    faker.setLocale("es");
     this.name = { field: "Nombre", value: this.#createName() };
     this.lastName = { field: "Apellido", value: this.#createLastName() };
     this.country = { field: "Origen", value: this.#createCountry() };
     const { adults, children } = this.#createGuests();
     this.adults = { field: "Cantidad de adultos", value: adults };
     this.children = { field: "Cantidad de niños", value: children };
-    this.date = { field: "Llegada", value: this.#createDate() };
+    this.date = {
+      field: "Llegada",
+      value: booked === 1 ? this.#createDate() : this.#createDay(),
+    };
     this.days = { field: "Días de estadía", value: this.#createDays() };
   }
 
@@ -38,6 +41,20 @@ class Visit {
     };
     const dateString = date.toLocaleDateString("es-BO", options);
     return dateString;
+  }
+
+  #createDay() {
+    const index = Math.floor(Math.random() * 7);
+    const dias = [
+      "lunes",
+      "martes",
+      "miercoles",
+      "jueves",
+      "viernes",
+      "sábado",
+      "domingo",
+    ];
+    return "El siguiente día " + dias[index];
   }
 
   #createDays() {

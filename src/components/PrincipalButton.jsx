@@ -3,9 +3,9 @@ import AppContext from "../context/AppContext";
 import "../styles/Buttons.css";
 
 const PrincipalButton = () => {
-  const { addVisit } = useContext(AppContext);
+  const { state, addVisit } = useContext(AppContext);
   const handleClick = () => {
-    addVisit();
+    addVisit(state.booked);
   };
   return (
     <button
