@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/Cards.css";
 
-const IncidentCard = () => {
-  return <p className="Card my-6 text-xl">IncidentCard</p>;
+const IncidentCard = ({ children }) => {
+  return <p className="Card my-6 text-xl">{children}</p>;
 };
 
 export default IncidentCard;

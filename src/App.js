@@ -1,3 +1,4 @@
+import { FaTrash } from "react-icons/fa";
 import OptionRadio from "./components/OptionRadio";
 import PrincipalButton from "./components/PrincipalButton";
 import SecondaryButton from "./components/SecondaryButton";
@@ -17,8 +18,12 @@ function App() {
         <section className="m-4 flex justify-around items-center gap-10 flex-wrap">
           <OptionRadio index={1} />
           <OptionRadio index={2} />
-          <PrincipalButton />
-          <SecondaryButton />
+          <PrincipalButton type="visit">
+            GENERAR VISITA ALEATORIA
+          </PrincipalButton>
+          <SecondaryButton type="visit">
+            <span>LIMPIAR VISITAS</span>
+          </SecondaryButton>
         </section>
         <CardsContainer />
         <IncidentContainer />
