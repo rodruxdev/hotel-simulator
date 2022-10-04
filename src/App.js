@@ -1,4 +1,3 @@
-import { FaTrash } from "react-icons/fa";
 import OptionRadio from "./components/OptionRadio";
 import PrincipalButton from "./components/PrincipalButton";
 import SecondaryButton from "./components/SecondaryButton";

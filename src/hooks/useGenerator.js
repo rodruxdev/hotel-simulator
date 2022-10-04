@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getRandomIncident } from "../lib/getRandomIncident";
 import Visit from "../lib/Visit";
 
 const initialState = {
@@ -27,7 +28,7 @@ const useGenerator = () => {
   };
 
   const addIncident = () => {
-    const incident = "Hola mundo";
+    const incident = getRandomIncident();
     setState({ ...state, incident });
   };
 

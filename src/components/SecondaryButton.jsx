@@ -23,7 +23,6 @@ const SecondaryButton = ({ type, children }) => {
   };
 
   useEffect(() => {
-    console.log(state.visits.length);
     if (type === "visit" && state.visits.length > 0) {
       setDisabled(false);
     } else if (type === "incident" && state.incident) {
@@ -31,6 +30,7 @@ const SecondaryButton = ({ type, children }) => {
     } else {
       setDisabled(true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
   // Mejorar rendimiento
   return (
