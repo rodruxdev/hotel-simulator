@@ -3,6 +3,7 @@ import PrincipalButton from "./components/PrincipalButton";
 import SecondaryButton from "./components/SecondaryButton";
 import Title from "./components/Title";
 import CardsContainer from "./containers/CardsContainer";
+import IncidentContainer from "./containers/IncidentContainer";
 import AppContext from "./context/AppContext";
 import useGenerator from "./hooks/useGenerator";
 
@@ -16,10 +17,15 @@ function App() {
         <section className="m-4 flex justify-around items-center gap-10 flex-wrap">
           <OptionRadio index={1} />
           <OptionRadio index={2} />
-          <PrincipalButton />
-          <SecondaryButton />
+          <PrincipalButton type="visit">
+            GENERAR VISITA ALEATORIA
+          </PrincipalButton>
+          <SecondaryButton type="visit">
+            <span>LIMPIAR VISITAS</span>
+          </SecondaryButton>
         </section>
         <CardsContainer />
+        <IncidentContainer />
       </main>
     </AppContext.Provider>
   );

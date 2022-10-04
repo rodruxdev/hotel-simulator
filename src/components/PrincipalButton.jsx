@@ -2,17 +2,22 @@ import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
 import "../styles/Buttons.css";
 
-const PrincipalButton = () => {
-  const { state, addVisit } = useContext(AppContext);
+const PrincipalButton = ({ type, children }) => {
+  const { state, addVisit, addIncident } = useContext(AppContext);
   const handleClick = () => {
-    addVisit(state.booked);
+    if (type === "visit") {
+      addVisit(state.booked);
+    }
+    if (type === "incident") {
+      addIncident();
+    }
   };
   return (
     <button
       className="bg-primary text-white Button text-lg"
       onClick={handleClick}
     >
-      GENERAR VISITA ALEATORIA
+      {children}
     </button>
   );
 };

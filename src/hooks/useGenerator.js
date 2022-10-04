@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { getRandomIncident } from "../lib/getRandomIncident";
 import Visit from "../lib/Visit";
 
 const initialState = {
   booked: 1,
   visits: [],
+  incident: "",
 };
 
 const useGenerator = () => {
@@ -25,7 +27,23 @@ const useGenerator = () => {
     setState({ ...state, visits: [] });
   };
 
-  return { state, setBooked, addVisit, deleteAllVisits };
+  const addIncident = () => {
+    const incident = getRandomIncident();
+    setState({ ...state, incident });
+  };
+
+  const deleteIncident = () => {
+    setState({ ...state, incident: "" });
+  };
+
+  return {
+    state,
+    setBooked,
+    addVisit,
+    deleteAllVisits,
+    addIncident,
+    deleteIncident,
+  };
 };
 
 export default useGenerator;
