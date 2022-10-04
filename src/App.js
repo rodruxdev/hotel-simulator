@@ -3,6 +3,7 @@ import PrincipalButton from "./components/PrincipalButton";
 import SecondaryButton from "./components/SecondaryButton";
 import Title from "./components/Title";
 import CardsContainer from "./containers/CardsContainer";
+import IncidentContainer from "./containers/IncidentContainer";
 import AppContext from "./context/AppContext";
 import useGenerator from "./hooks/useGenerator";
 
@@ -20,6 +21,7 @@ function App() {
           <SecondaryButton />
         </section>
         <CardsContainer />
+        <IncidentContainer />
       </main>
     </AppContext.Provider>
   );
