@@ -29,9 +29,9 @@ class Visit {
   }
 
   #createDate() {
-    const januaryFirst = new Date(2023, 0, 1);
-    const julyFirst = new Date(2023, 6, 1);
-    const dateFaker = faker.date.between(januaryFirst, julyFirst);
+    const marchFirst = new Date(2023, 2, 1);
+    const octoberLast = new Date(2023, 9, 31);
+    const dateFaker = faker.date.between(marchFirst, octoberLast);
     const date = new Date(dateFaker);
     const options = {
       weekday: "long",
@@ -65,22 +65,22 @@ class Visit {
   #createGuests() {
     const adults = this.#createAdults();
     let children = this.#createChildren();
-    children = adults + children > 10 ? 10 - adults : children;
+    children = adults + children > 5 ? 0 : children;
     return { adults, children };
   }
 
   #createAdults() {
     const seed = Math.random();
-    const initial = Math.ceil(Math.random() * 5);
-    if (seed <= 0.8) {
+    const initial = Math.ceil(Math.random() * 3);
+    if (seed <= 0.95) {
       return initial;
     }
-    return initial + 5;
+    return Math.ceil(Math.random() * 6) + 3;
   }
 
   #createChildren() {
     const seed = Math.random();
-    if (seed <= 0.5) {
+    if (seed <= 0.9) {
       return 0;
     }
     return Math.ceil(Math.random() * 2);
