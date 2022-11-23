@@ -65,7 +65,7 @@ class Visit {
   #createGuests() {
     const adults = this.#createAdults();
     let children = this.#createChildren();
-    children = adults + children > 5 ? 0 : children;
+    children = adults + children > 7 ? 0 : children;
     return { adults, children };
   }
 
@@ -75,7 +75,7 @@ class Visit {
     if (seed <= 0.3) {
       return initial;
     }
-    return Math.ceil(Math.random() * 3) + 3;
+    return Math.ceil(Math.random() * 4) + 3;
   }
 
   #createChildren() {
