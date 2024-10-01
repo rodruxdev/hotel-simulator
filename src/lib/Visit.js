@@ -25,17 +25,50 @@ class Visit {
   }
 
   #createCountry() {
-    return faker.address.country();
+    const countries = [
+      "Japón",
+      "Corea del Sur",
+      "China",
+      "Alemania",
+      "España",
+      "Italia",
+      "Francia",
+      "Estados Unidos",
+      "Canadá",
+      // Latin American countries
+      "México",
+      "Guatemala",
+      "Belice",
+      "El Salvador",
+      "Honduras",
+      "Nicaragua",
+      "Costa Rica",
+      "Panamá",
+      "Cuba",
+      "República Dominicana",
+      "Puerto Rico",
+      "Colombia",
+      "Venezuela",
+      "Ecuador",
+      "Perú",
+      "Bolivia",
+      "Paraguay",
+      "Chile",
+      "Argentina",
+      "Uruguay",
+      "Brasil",
+    ];
+    const index = Math.floor(Math.random() * countries.length);
+    return countries[index];
   }
 
   #createDate() {
-    const initialDate = new Date(2023, 6, 1);
-    const FinishDate = new Date(2023, 11, 30);
+    const initialDate = new Date(2025, 0, 1);
+    const FinishDate = new Date(2025, 11, 31);
     const dateFaker = faker.date.between(initialDate, FinishDate);
     const date = new Date(dateFaker);
     const options = {
       weekday: "long",
-      year: "numeric",
       month: "long",
       day: "numeric",
     };
@@ -71,16 +104,22 @@ class Visit {
 
   #createAdults() {
     const seed = Math.random();
-    const initial = Math.ceil(Math.random() * 3);
-    if (seed <= 0.3) {
+    const initial = Math.ceil(Math.random() * 2);
+    // Guests between 1-2 - 90%
+    // Between 3-5 - 10%
+    // Between 6 -7 - 5%
+    if (seed <= 0.85) {
       return initial;
+    } else if (seed > 0.85 && seed <= 0.95) {
+      return Math.ceil(Math.random() * 3) + 3;
     }
-    return Math.ceil(Math.random() * 4) + 3;
+    return Math.ceil(Math.random() * 2) + 5;
   }
 
   #createChildren() {
     const seed = Math.random();
-    if (seed <= 0.9) {
+    // No children 40%
+    if (seed <= 0.4) {
       return 0;
     }
     return Math.ceil(Math.random() * 2);
