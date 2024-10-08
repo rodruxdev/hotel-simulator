@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/hotel-simulator/static/css/main.89e6d5cf.css",
-    "main.js": "/hotel-simulator/static/js/main.78f10487.js",
+    "main.css": "/hotel-simulator/static/css/main.645e11fd.css",
+    "main.js": "/hotel-simulator/static/js/main.f0847256.js",
     "index.html": "/hotel-simulator/index.html",
-    "main.89e6d5cf.css.map": "/hotel-simulator/static/css/main.89e6d5cf.css.map",
-    "main.78f10487.js.map": "/hotel-simulator/static/js/main.78f10487.js.map"
+    "main.645e11fd.css.map": "/hotel-simulator/static/css/main.645e11fd.css.map",
+    "main.f0847256.js.map": "/hotel-simulator/static/js/main.f0847256.js.map"
   },
   "entrypoints": [
-    "static/css/main.89e6d5cf.css",
-    "static/js/main.78f10487.js"
+    "static/css/main.645e11fd.css",
+    "static/js/main.f0847256.js"
   ]
 }
