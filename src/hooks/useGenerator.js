@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { getRandomIncident } from "../lib/getRandomIncident";
 import Visit from "../lib/Visit";
+import { getRandomService } from "../lib/getRandomService";
 
 const initialState = {
   booked: 1,
   visits: [],
   incident: "",
+  service: {},
 };
 
 const useGenerator = () => {
@@ -36,6 +38,15 @@ const useGenerator = () => {
     setState({ ...state, incident: "" });
   };
 
+  const addService = () => {
+    const service = getRandomService();
+    setState({ ...state, service });
+  };
+
+  const deleteService = () => {
+    setState({ ...state, service: {} });
+  };
+
   return {
     state,
     setBooked,
@@ -43,6 +54,8 @@ const useGenerator = () => {
     deleteAllVisits,
     addIncident,
     deleteIncident,
+    addService,
+    deleteService,
   };
 };
 

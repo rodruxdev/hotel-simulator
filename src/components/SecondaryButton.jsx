@@ -4,7 +4,8 @@ import AppContext from "../context/AppContext";
 import "../styles/Buttons.css";
 
 const SecondaryButton = ({ type, children }) => {
-  const { state, deleteAllVisits, deleteIncident } = useContext(AppContext);
+  const { state, deleteAllVisits, deleteIncident, deleteService } =
+    useContext(AppContext);
   const [disabled, setDisabled] = useState(true);
 
   const handleClick = () => {
@@ -20,12 +21,19 @@ const SecondaryButton = ({ type, children }) => {
       const isExecuted = confirm("¿Estas segura de eliminar el incidente?");
       if (isExecuted) deleteIncident();
     }
+    if (type === "service") {
+      // eslint-disable-next-line no-restricted-globals
+      const isExecuted = confirm("¿Estas segura de eliminar el servicio?");
+      if (isExecuted) deleteService();
+    }
   };
 
   useEffect(() => {
     if (type === "visit" && state.visits.length > 0) {
       setDisabled(false);
     } else if (type === "incident" && state.incident) {
+      setDisabled(false);
+    } else if (type === "service" && Object.keys(state.service).length > 0) {
       setDisabled(false);
     } else {
       setDisabled(true);

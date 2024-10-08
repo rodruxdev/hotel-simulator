@@ -4,6 +4,7 @@ import SecondaryButton from "./components/SecondaryButton";
 import Title from "./components/Title";
 import CardsContainer from "./containers/CardsContainer";
 import IncidentContainer from "./containers/IncidentContainer";
+import ServiceContainer from "./containers/ServiceContainer";
 import AppContext from "./context/AppContext";
 import useGenerator from "./hooks/useGenerator";
 
@@ -26,6 +27,7 @@ function App() {
         </section>
         <CardsContainer />
         <IncidentContainer />
+        <ServiceContainer />
       </main>
     </AppContext.Provider>
   );

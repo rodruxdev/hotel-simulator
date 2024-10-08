@@ -6,7 +6,7 @@ const INCIDENTS = [
   "Uno de los huéspedes organizó una fiesta en su habitación y alguien puso una queja a la policía. Se le impuso al hotel una multa de 500 UFV's.",
   "El servicio que se le brindó a uno de los huéspedes fue excelente y reservó habitaciones para su familia por cuatro noches el próximo mes a partir del 20.",
   "La leche del desayuno se cortó, debe volver a comprarla",
-  "La panadería con la que hizo el acuerdo de provisión de pan no podrá surtir el pan durant euna semana.  El proveedor de emergencia aumenta 0,10 Bs. Por cada pan.",
+  "La panadería con la que hizo el acuerdo de provisión de pan no podrá surtir el pan durante una semana.  El proveedor de emergencia aumenta 0,10 Bs. Por cada pan.",
   "Un pordiosero se cayó y rompió la puerta de cristal del hotel.  Reponga el vidrio.",
   "Mientras la recepcionista se ausentó de su puesto, robaron tres controles remotos de los aparatos de cable.  Repóngalos con la empresa de servicios.",
   "Uno de los húespedes se llevó las llaves de la habitación, repóngalas.",
