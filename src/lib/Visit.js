@@ -104,25 +104,25 @@ class Visit {
 
   #createAdults() {
     const seed = Math.random();
-    const initial = Math.ceil(Math.random() * 2);
-    // Guests between 1-2 - 90%
-    // Between 3-5 - 10%
-    // Between 6 -7 - 5%
-    if (seed <= 0.85) {
+    const initial = Math.ceil(Math.random() * 10);
+    // Guests between 1-10 - 94%
+    // Between 11-15 - 5%
+    // Between 16-20 - 1%
+    if (seed <= 0.94) {
       return initial;
-    } else if (seed > 0.85 && seed <= 0.95) {
-      return Math.ceil(Math.random() * 3) + 3;
+    } else if (seed > 0.94 && seed <= 0.99) {
+      return Math.ceil(Math.random() * 5) + 10;
     }
-    return Math.ceil(Math.random() * 2) + 5;
+    return Math.ceil(Math.random() * 5) + 15;
   }
 
   #createChildren() {
     const seed = Math.random();
-    // No children 40%
-    if (seed <= 0.4) {
+    // No children 60%
+    if (seed <= 0.6) {
       return 0;
     }
-    return Math.ceil(Math.random() * 2);
+    return Math.ceil(Math.random() * 4);
   }
 }
 
