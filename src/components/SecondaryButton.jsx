@@ -33,7 +33,10 @@ const SecondaryButton = ({ type, children }) => {
       setDisabled(false);
     } else if (type === "incident" && state.incident) {
       setDisabled(false);
-    } else if (type === "service" && Object.keys(state.service).length > 0) {
+    } else if (
+      type === "service" &&
+      Object.keys(state?.service || {})?.length > 0
+    ) {
       setDisabled(false);
     } else {
       setDisabled(true);

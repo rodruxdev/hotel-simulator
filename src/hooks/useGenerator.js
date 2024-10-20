@@ -6,8 +6,8 @@ import { getRandomService } from "../lib/getRandomService";
 const initialState = {
   booked: 1,
   visits: [],
-  incident: "",
-  service: {},
+  incident: undefined,
+  service: undefined,
 };
 
 const useGenerator = () => {

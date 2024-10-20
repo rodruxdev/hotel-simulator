@@ -1,3 +1,4 @@
+import ExportButton from "./components/ExportButton";
 import OptionRadio from "./components/OptionRadio";
 import PrincipalButton from "./components/PrincipalButton";
 import SecondaryButton from "./components/SecondaryButton";
@@ -13,7 +14,10 @@ function App() {
 
   return (
     <AppContext.Provider value={initialState}>
-      <main className="w-full flex items-center justify-center flex-col py-14">
+      <header className="p-3 flex items-center justify-end relative top-0 left-0 right-0 bg-transparent w-full">
+        <ExportButton />
+      </header>
+      <main className="w-full flex items-center justify-center flex-col py-8">
         <Title />
         <section className="m-4 flex justify-around items-center gap-10 flex-wrap">
           <OptionRadio index={1} />
